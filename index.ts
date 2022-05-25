@@ -7,6 +7,7 @@ import ping from "./src/plugins/ping";
 import ICP from "./src/plugins/ICP";
 import LuckDraw from "./src/plugins/LuckDraw";
 import webShotCut from "./src/plugins/webShotCut";
+import welcome from "./src/plugins/welcome";
 //start
 const App = new app(ConfigList.Qid);
 App.boot();
@@ -16,3 +17,4 @@ App.use(ping);
 App.use(ICP);
 App.use(LuckDraw);
 // App.use(webShotCut); 此插件需配置token，详细请进入插件文件src/plugins/webShotCut.ts
+App.use(welcome);
