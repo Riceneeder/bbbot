@@ -1,3 +1,5 @@
+# BBBOT
+---
 # 易于编写的QQ机器人，使用[oicq](https://github.com/takayama-lily/oicq)协议库，功能抽离为单独插件
 项目地址（GitHub）：[https://github.com/Riceneeder/bbbot](https://github.com/Riceneeder/bbbot)
 ### 运行环境:
