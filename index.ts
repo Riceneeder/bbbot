@@ -15,4 +15,4 @@ App.use(echo);
 App.use(ping);
 App.use(ICP);
 App.use(LuckDraw);
-App.use(webShotCut);
+// App.use(webShotCut); 此插件需配置token，详细请进入插件文件src/plugins/webShotCut.ts
