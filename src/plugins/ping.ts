@@ -1,6 +1,6 @@
 import { exec } from "child_process";
 import { Client } from "oicq";
-//ping，用法：ping <网址>
+//仅管理员可用//ping，用法：ping <网址>
 export default function ping(bot:Client){
     bot.on('message.group',(event)=>{
         if(event.raw_message.indexOf('ping') == 0 && event.raw_message != 'ping' && event.sender.role!='member'){

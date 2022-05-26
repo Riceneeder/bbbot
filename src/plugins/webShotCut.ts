@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Client, segment } from "oicq";
-//网页截屏，用法：cut <网址>
+//仅管理员可用//网页截屏，用法：cut <网址>
 //需要申请token，申请地址：https://www.screenshotmaster.com
 //=================配置区=================
 const token = 'your token';

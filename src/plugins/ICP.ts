@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Client } from "oicq";
-//备案查询，用法：备案 <网址>
+//仅管理员可用//备案查询，用法：备案 <网址>
 export default function ICP(bot: Client) {
     bot.on('message', (event) => {
         if (event.raw_message.indexOf('备案') == 0) {

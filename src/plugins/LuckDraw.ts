@@ -1,6 +1,6 @@
 import { Client } from "oicq";
 import "oicq2-cq-enable";
-//抽奖，用法：抽奖 <数字：抽几个>
+//仅管理员可用//抽奖，用法：抽奖 <数字：抽几个>
 export default function LuckDraw(bot: Client) {
     bot.on('message.group', async event => {
         if (event.raw_message.indexOf('抽奖') == 0 && event.sender.role != 'member' && event.raw_message != '抽奖') {
