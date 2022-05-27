@@ -9,6 +9,7 @@ import LuckDraw from "./src/plugins/LuckDraw";
 // import webShotCut from "./src/plugins/webShotCut";  此插件需配置token，详细请进入插件文件src/plugins/webShotCut.ts
 import welcome from "./src/plugins/welcome";
 import song from "./src/plugins/song";
+import searchForQuestions from "./src/plugins/searchForQuestions";
 //========start
 const App = new app(ConfigList.Qid);
 App.boot();
@@ -20,3 +21,4 @@ App.use(ICP);
 App.use(LuckDraw);
 App.use(welcome);
 App.use(song);
+App.use(searchForQuestions);
