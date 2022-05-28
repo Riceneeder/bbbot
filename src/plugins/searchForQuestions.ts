@@ -1,8 +1,8 @@
 import axios from "axios";
 import { Client } from "oicq";
 //==========配置区===============
-const uid = 13386;
-const token = '0BCmOn6WzG2djAUSJPDw2pNjqx5VNubX';
+const uid = 123123123123;
+const token = '123123123123123';
 //==============================
 const api = 'https://api.wanshiwu.asia/api/search';
 export default function searchForQuestions(bot: Client) {
