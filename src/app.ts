@@ -26,7 +26,9 @@ export default class app {
         })
     }
 
-    use(plugin:Function){
-        plugin(this.bot);
+    use(plugins:Array<Function>) {
+        plugins.forEach(plugin=>{
+            plugin(this.bot);
+        });
     }
 }

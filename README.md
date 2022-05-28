@@ -44,10 +44,16 @@ yarn stop
 **第一步** 在index.ts中引入插件
 ```
 import plugin1 from "./src/plugins/plugin1";
+import plugin2 from "./src/plugins/plugin2";
+import plugin3 from "./src/plugins/plugin3";
 ```
 **第二步** 在index.ts中启用插件
 ```
-App.use(plugin1);
+const plugins = [
+    plugin1,
+    plugin2,
+    plugin3
+];
 ```
 ---
 ## 插件的编写
