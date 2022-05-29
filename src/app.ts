@@ -1,5 +1,6 @@
 import { createClient, Config, Client } from "oicq";
 
+
 export default class app {
     constructor(Qid: number) {
         this.Qid = Qid;
@@ -26,9 +27,11 @@ export default class app {
         })
     }
 
-    use(plugins:Array<Function>) {
-        plugins.forEach(plugin=>{
-            plugin(this.bot);
-        });
+    use(plugins: { [key: string]: any; }, keys: string[]) {
+        keys.forEach(key => {
+            this.bot.logger.mark('启用插件：'+key);
+            plugins[key].fun(this.bot);
+        })
     }
+
 }

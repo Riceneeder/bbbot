@@ -16,35 +16,35 @@ function GetUrlInString(s: string): RegExpMatchArray | null {
     let Url = s.match(reg);
     return Url;
 }
-
-export default function webShotCut(bot: Client): void {
-    bot.on('message.group', event => {
-        if (event.raw_message.indexOf('cut') == 0 && event.raw_message != 'cut' && event.sender.role != 'member') {
-            let Url = GetUrlInString(event.raw_message);
-            if (Url != null) {
-                for (let i=0;i<Url.length;i++) {
-                    let url = Url[i];
-                    axios.get(`${baseUrl}`,{
-                        params:{
-                            token:token,
-                            width:width,
-                            height:height,
-                            output:output,
-                            zone:zone,
-                            url:url,
-                        }
-                    }).then(re=>{
-                        if(re.data.code == 200){
-                            let shotcut = re.data.data.url;
-                            let reply = segment.image(shotcut);
-                            event.reply(reply,true);
-                        }
-                    }).catch(err=>{
-                        event.reply('failed,something goes wrong',true)
-                    })
+module.exports = {
+    fun: (bot: Client) => {
+        bot.on('message.group', event => {
+            if (event.raw_message.indexOf('cut') == 0 && event.raw_message != 'cut' && event.sender.role != 'member') {
+                let Url = GetUrlInString(event.raw_message);
+                if (Url != null) {
+                    for (let i = 0; i < Url.length; i++) {
+                        let url = Url[i];
+                        axios.get(`${baseUrl}`, {
+                            params: {
+                                token: token,
+                                width: width,
+                                height: height,
+                                output: output,
+                                zone: zone,
+                                url: url,
+                            }
+                        }).then(re => {
+                            if (re.data.code == 200) {
+                                let shotcut = re.data.data.url;
+                                let reply = segment.image(shotcut);
+                                event.reply(reply, true);
+                            }
+                        }).catch(err => {
+                            event.reply('failed,something goes wrong', true)
+                        })
+                    }
                 }
             }
-        }
-    })
+        })
+    }
 }
-

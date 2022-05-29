@@ -1,5 +1,5 @@
 # BBBOT
----
+
 # 易于编写的QQ机器人，使用[oicq](https://github.com/takayama-lily/oicq)协议库，功能抽离为单独插件
 项目地址（GitHub）：[https://github.com/Riceneeder/bbbot](https://github.com/Riceneeder/bbbot)
 ### 运行环境:
@@ -9,7 +9,7 @@
 ### clone或下载仓库源码
 ### 在命令行中运行以下命令安装必要依赖
 ```
-npm i ts-node typescript yarn pm2 -g
+npm i typescript yarn pm2 -g
 ```
 
 ### 依赖安装完成后进入目录安装QQ机器人依赖
@@ -23,38 +23,23 @@ yarn
 ```
 yarn dev    
 ```
-#### **生产环境运行**
+#### **运行**
 ```
 yarn start
 ```
-#### **生产环境重启**
+#### **重启**
 ```
 yarn restart
 ```
-#### **生产环境停止**
+#### **停止**
 ```
 yarn stop
 ```
 ---
 ## 插件的启用
 
-> 所有插件均存放在src/plugins
-#### 插件启用
+> 将插件放入src/plugins即可自动启用，每次改变需手动重启机器人
 
-**第一步** 在index.ts中引入插件
-```
-import plugin1 from "./src/plugins/plugin1";
-import plugin2 from "./src/plugins/plugin2";
-import plugin3 from "./src/plugins/plugin3";
-```
-**第二步** 在index.ts中启用插件
-```
-const plugins = [
-    plugin1,
-    plugin2,
-    plugin3
-];
-```
 ---
 ## 插件的编写
 >**所有插件的文件名应与插件暴露的方法名保持一致**

@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.33.tgz#3c1879b276dc63e73030bb91165e62a4509cd506"
   integrity sha512-miWq2m2FiQZmaHfdZNcbpp9PuXg34W5JZ5CrJ/BaS70VuhoJENBEQybeiYSaPBRNq6KQGnjfEnc/F3PN++D+XQ==
 
+"@types/require-all@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@types/require-all/-/require-all-3.0.3.tgz#3b8c0301e378e8b3297988a722881b136a8ba3e1"
+  integrity sha512-y9IkD6jpxoYD2SNK4CHN2NNSL+6EVtTp26Jg3l1VbBjPdXNaKg5PeclIjdAj8lGxh0Cpur5sHRJPKRa3cPtqgA==
+
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
@@ -207,6 +212,11 @@ probe-image-size@^7.2.2:
     lodash.merge "^4.6.2"
     needle "^2.5.2"
     stream-parser "~0.3.1"
+
+require-all@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/require-all/-/require-all-3.0.0.tgz#473d49704be310115ce124f77383b1ebd8671312"
+  integrity sha1-Rz1JcEvjEBFc4ST3c4Ox69hnExI=
 
 rfdc@^1.3.0:
   version "1.3.0"

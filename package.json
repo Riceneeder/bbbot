@@ -1,16 +1,18 @@
 {
   "name": "bbbot",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "@types/node": "^17.0.33",
+    "@types/require-all": "^3.0.3",
     "axios": "^0.27.2",
     "oicq": "^2.2.2",
-    "oicq2-cq-enable": "^1.0.3"
+    "oicq2-cq-enable": "^1.0.3",
+    "require-all": "^3.0.0"
   },
   "scripts": {
-    "dev": "ts-node index.ts",
+    "dev": "tsc && node index.js",
     "start": "tsc && pm2 start index.js",
     "stop": "pm2 delete all",
     "restart": "pm2 restart all"
