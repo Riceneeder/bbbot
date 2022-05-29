@@ -42,7 +42,7 @@ yarn stop
 
 ---
 ## 插件的编写
->**所有插件的文件名应与插件暴露的方法名保持一致**
+
 + 使用JavaScript和typescript均可，推荐使用typescript以获得更好的提示
 + 写法参考 src/plugins/echo.ts
 + QQ协议库API参看[OICQ](https://github.com/takayama-lily/oicq#api-reference)
