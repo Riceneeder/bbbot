@@ -68,9 +68,12 @@ yarn stop
 ```TS
 import { Client } from "oicq"; // 引入类型检查
 module.exports = {
-    fun:(bot:Client,pluginsInfo: Map<string, any>)=>{ // 插件的主函数,第一个函数参数为机器人实例，第二个参数为插件信息
+    fun:(bot:Client, pluginsInfo: Map<string, {// 插件的主函数,第一个函数参数为机器人实例，第二个参数为插件信息
+        name: string,
+        description: string,
+        howtouse: string,
+    }>)=>{ 
         // 插件的主函数内容
-        // 在此处写插件的代码
     },
     info:{ // 插件的信息
         name:'bbbot-plugin-<your plugin name>', // 插件的名称，插件名称应当与插件文件名称一致，请勿使用中文，确保插件名称唯一
