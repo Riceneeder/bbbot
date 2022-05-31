@@ -1,6 +1,7 @@
 import requireAll from "require-all";
 const plugins = requireAll({
     dirname: __dirname + "/plugins",
+    recursive:false
 });
 const keys = Object.keys(plugins);
 var pluginsInfo = new Map;
