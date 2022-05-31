@@ -11,5 +11,10 @@ module.exports = {
             let msg = segment.at(who, `欢迎入群，${who_name}\n${welcome_msg}`);
             bot.sendGroupMsg(which_group, msg);
         });
+    },
+    info: {
+        name: 'bbbot-plugin-welcome',
+        description: '入群欢迎',
+        howtouse: '无',   
     }
 };

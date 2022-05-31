@@ -6,7 +6,7 @@ import AllPlugins from "./src/pluginLoader";
 //========start
 const App = new app(ConfigList.Qid);
 App.boot();
-App.use(AllPlugins.plugins, AllPlugins.keys);
+App.use(AllPlugins.plugins, AllPlugins.keys, AllPlugins.pluginsInfo);
 
 
 

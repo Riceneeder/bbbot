@@ -46,5 +46,10 @@ module.exports = {
                 }
             }
         })
+    },
+    info: {
+        name: 'bbbot-plugin-cut',
+        description: '网页截屏',
+        howtouse: 'cut <网址>',
     }
 }

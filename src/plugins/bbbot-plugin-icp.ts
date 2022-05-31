@@ -23,5 +23,10 @@ module.exports = {
                 })
             }
         })
+    },
+    info: {
+        name: 'bbbot-plugin-icp',
+        description: '查询备案信息',
+        howtouse: '备案 <域名>',
     }
 };

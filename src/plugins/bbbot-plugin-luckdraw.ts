@@ -28,5 +28,10 @@ module.exports = {
                 }
             }
         })
-    }
+    },
+    info: {
+        name: 'bbbot-plugin-luckdraw',
+        description: '抽奖',
+        howtouse: '抽奖 <数字：抽几个>',
+    } 
 };

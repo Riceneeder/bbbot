@@ -8,5 +8,10 @@ module.exports = {
                 event.reply(reply);
             }
         })
+    },
+    info:{
+        name:'bbbot-plugin-echo',
+        description:'输出文字',
+        howtouse:'echo <一段话>',
     }
 }

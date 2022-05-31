@@ -11,6 +11,11 @@ module.exports = {
                 });
             }
         });
+    },
+    info: {
+        name: 'bbbot-plugin-ping',
+        description: 'ping',
+        howtouse: 'ping <网址>',
     }
 }
 
