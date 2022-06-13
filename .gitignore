@@ -130,4 +130,7 @@ dist
 .pnp.*
 
 data/
-*.js
+bbb*.js
+app.js
+index.js
+plugin*.js

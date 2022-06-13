@@ -26,6 +26,6 @@ module.exports = {
     info: {
         name: 'bbbot-plugin-controller',
         description: '插件信息管理',
-        howtouse: '1.插件列表\n2.插件说明 <插件名>',
+        howtouse: '插件列表 或者 插件说明 <插件名>',
     }
 };

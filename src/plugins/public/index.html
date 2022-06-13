@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@4.5.0/css/xterm.css" />
+    <title>BBbot-Web管理页面</title>
+</head>
+
+<body class="mdui-drawer-body-left mdui-theme-layout-dark">
+    <div class="mdui-drawer" id="mdui-drawer">
+        <ul class="mdui-list">
+            <div class="mdui-list-item mdui-ripple mdui-typo-display-2">
+                BBBOT
+            </div>
+            <li class="mdui-subheader"></li>
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">extension</i>
+                <div class="mdui-list-item-content">插件</div>
+            </li>
+            <li class="mdui-subheader"></li>
+            <li class="mdui-list-item mdui-ripple" mdui-dialog="{target: '#about'}">
+                <i class="mdui-list-item-icon mdui-icon material-icons">error</i>
+                <div class="mdui-list-item-content">关于</div>
+            </li>
+        </ul>
+    </div>
+    <!-- 关于 -->
+    <div class="mdui-dialog" id="about">
+        <div class="mdui-card">
+            <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
+            <div class="mdui-card-media">
+              <img class="mdui-img-fluid" src="./about.png" style="object-fit: cover;height: 230px;"/>
+            </div>
+            <!-- 卡片的标题和副标题 -->
+            <div class="mdui-card-primary">
+              <div class="mdui-card-primary-title">关于</div>
+            </div>
+            <!-- 卡片的内容 -->
+            <div class="mdui-card-content">
+                这是一个简单的机器人UI页面，用于查看BBBOT的运行信息。
+            </div>
+            <!-- 卡片的按钮 -->
+            <div class="mdui-card-actions">
+              <button class="mdui-btn mdui-ripple" onclick="window.open('https://gankun.cn.ma/')">
+                博客
+              </button>
+              <button class="mdui-btn mdui-ripple" onclick="window.open('https://github.com/riceneeder/')">
+                Github
+              </button>
+            </div>
+          
+          </div>
+    </div>
+    <div class="mdui-appbar mdui-shadow-0">
+        <div class="mdui-toolbar">
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target:'#mdui-drawer'}">
+                <i class="mdui-icon material-icons">menu</i>
+            </a>
+            <a href="javascript:;" class="mdui-typo-title" id="botName">QQ昵称</a>
+            <!--  -->
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#more_vert'}">
+                <i class="mdui-icon material-icons">more_vert</i>
+            </a>
+            <ul class="mdui-menu" id="more_vert">
+                <li class="mdui-menu-item">
+                    <a href="javascript:refresh();" class="mdui-ripple">Refresh</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mdui-container-fluid">
+        <!-- 插件 -->
+        <div class="mdui-col-xs-6 mdui-row" id="plugins">
+
+        </div>
+        <!-- 日志和系统信息 -->
+        <div class="mdui-col-xs-6">
+            <div class="mdui-container-fluid mdui-shadow-5">
+                <ul class="mdui-list">
+                    <li class="mdui-list-item">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">assignment</i>
+                        <div class="mdui-list-item-content">日志</div>
+                    </li>
+                </ul>
+                <div class="mdui-m-b-1" id="terminal"></div>
+            </div>
+            <div class="mdui-container-fluid mdui-m-t-2 mdui-shadow-5">
+                <ul class="mdui-list">
+                    <li class="mdui-list-item">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">desktop_windows</i>
+                        <div class="mdui-list-item-content" id="OS">操作系统</div>
+                    </li>
+                    <li class="mdui-list-item">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">toys</i>
+                        <div class="mdui-list-item-content" id="runtime">运行环境</div>
+                    </li>
+                    <li class="mdui-list-item">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">new_releases</i>
+                        <div class="mdui-list-item-content" id="version">软件版本</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xterm@4.5.0/lib/xterm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.3.0/lib/xterm-addon-fit.js"></script>
+<script src="./terminal.js"></script>
+<script src="./wss.js"></script>
+</html>
