@@ -49,7 +49,7 @@ module.exports = {
     },
     info: {
         name: 'bbbot-plugin-cut',
-        description: '网页截屏',
+        description: '网页截屏(管理员/群主可用)',
         howtouse: 'cut <网址>',
     }
 }

@@ -4,7 +4,7 @@ export default class app {
     constructor(Qid: number) {
         this.Qid = Qid;
         this.config = {
-            platform: 4,
+            platform: 5,
             cache_group_member: false
         }
         this.bot = createClient(Qid, this.config);

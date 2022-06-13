@@ -8,7 +8,7 @@ const api = 'https://api.wanshiwu.asia/api/search';
 module.exports = {
     fun: (bot: Client) => {
         bot.on('message', event => {
-            if (event.raw_message.indexOf('搜题') == 0 && event.raw_message != '搜题' && event.sender.user_id == 845541909) {
+            if (event.raw_message.indexOf('搜题') == 0 && event.raw_message != '搜题') {
                 let question = event.raw_message.replace('搜题', '').trim();
                 axios.get(api, {
                     params: {

@@ -31,7 +31,7 @@ module.exports = {
     },
     info: {
         name: 'bbbot-plugin-luckdraw',
-        description: '抽奖',
+        description: '抽奖(管理员/群主可用)',
         howtouse: '抽奖 <数字：抽几个>',
     } 
 };

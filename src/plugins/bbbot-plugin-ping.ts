@@ -14,7 +14,7 @@ module.exports = {
     },
     info: {
         name: 'bbbot-plugin-ping',
-        description: 'ping',
+        description: 'ping(管理员/群主可用)',
         howtouse: 'ping <网址>',
     }
 }

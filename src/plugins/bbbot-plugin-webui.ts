@@ -17,8 +17,8 @@ const systemInfo = {
     Node:versions.node,
     AppVersion:packageJson.version,
 };
-// 创建 websocket 服务器 监听在 3000 端口
-const wss = new WebSocketServer({ port: 3000 })
+// 创建 websocket 服务器 监听在 9527 端口
+const wss = new WebSocketServer({ port: 9527 })
 // log格式化
 function initLog(msgTime:string,msgType: string, msg: string,from: string) {
     let log = `\x1B[32m${msgTime}[${msgType}]-from-[${from}]:\x1B[0m${msg}`;
@@ -35,9 +35,9 @@ module.exports = {
                 "howtouse":value.howtouse});
         }
         // 启动网页
-        webServer.listen(3001);
+        webServer.listen(9528);
         bot.logger.mark("---------------BBBot-WebUI---------------");
-        bot.logger.mark("已启动,端口为3001,本地访问地址为http://localhost:3001");
+        bot.logger.mark("已启动,端口为3001,本地访问地址为http://localhost:9528");
         bot.logger.mark("-----------------------------------------");
         webServer.get("/", (req, res) => {
             res.send('./public/index.html');
@@ -84,6 +84,6 @@ module.exports = {
     info: {
         name: 'bbbot-plugin-webui',
         description: '在网页查看机器人运行信息',
-        howtouse: '访问 http://机器人运行的服务器IP:3001/',
+        howtouse: '访问 http://机器人运行的服务器IP:9528/',
     }
 }
